@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Android
+local.properties
+*.apk
+*.aab
+captures/
+.externalNativeBuild/
+.cxx/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+
+# 用户数据（标注状态/复制图片）
+app/src/main/assets/
+state.json

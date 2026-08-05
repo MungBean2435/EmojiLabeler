@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的 emoji（标注时只显示这些）"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:id="@+id/emojiGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:columnCount="4" />
+
+        <Button
+            android:id="@+id/btnAddEmoji"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:text="＋ 添加 emoji" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="存储模式"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rbCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="复制到 App 内标注（推荐，稳定）" />
+
+            <RadioButton
+                android:id="@+id/rbInplace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="原地移动（省空间，稍慢）" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="标注行为"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/swAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="标注后自动下一张" />
+
+        <Switch
+            android:id="@+id/swMulti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多标模式（一张图可标多个 emoji）" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="图片预览背景"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rbBgTransparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="透明（默认）" />
+
+            <RadioButton
+                android:id="@+id/rbBgBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="黑色" />
+
+            <RadioButton
+                android:id="@+id/rbBgWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="白色" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etBgCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="自定义颜色（#RRGGBB 或 #AARRGGBB），填了优先"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:text="保存设置" />
+    </LinearLayout>
+</ScrollView>
