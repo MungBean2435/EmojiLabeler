@@ -14,10 +14,15 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Build debug APK
-        run: ./gradlew assembleDebug
-      - name: Upload APK
+      - name: Build APKs (debug + release)
+        run: ./gradlew assembleDebug assembleRelease
+      - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
           name: EmojiLabeler-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Upload release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: EmojiLabeler-release
+          path: app/build/outputs/apk/release/app-release.apk
